@@ -17,13 +17,11 @@ private:
     //// STUDENT CODE
     ////
 
-    // data handles (owned)
-    //std::vector<GraphEdge *> _childEdges;  // edges to subsequent nodes
+    // data handles (owned)    
     std::vector< unique_ptr<GraphEdge> > _childEdges;  // edges to subsequent nodes. TASK 4 code change: make _childEdges a unique pointer
 
     // data handles (not owned)
-    std::vector<GraphEdge *> _parentEdges; // edges to preceding nodes 
-    //ChatBot *_chatBot;
+    std::vector<GraphEdge *> _parentEdges; // edges to preceding nodes     
     ChatBot _chatBot; //TASK 5 code change: _chatBot is no longer a raw pointer
 
     ////
@@ -47,14 +45,12 @@ public:
 
     // proprietary functions
     void AddToken(std::string token); // add answers to list
-    void AddEdgeToParentNode(GraphEdge *edge);
-    //void AddEdgeToChildNode(GraphEdge *edge);
+    void AddEdgeToParentNode(GraphEdge *edge);    
     void AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge); //TASK 4 code change: syntax for unique pointers
 
     //// STUDENT CODE
     ////
-
-    //void MoveChatbotHere(ChatBot *chatbot);
+    
     void MoveChatbotHere(ChatBot chatbot); //TASK 5 code change: update syntax for smart pointer
 
     ////

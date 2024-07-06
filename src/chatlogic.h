@@ -20,11 +20,9 @@ private:
     //// STUDENT CODE
     ////
 
-    // data handles (owned)
-    //std::vector<GraphNode *> _nodes;
+    // data handles (owned)   
     std::vector< unique_ptr<GraphNode> > _nodes; //Task 3 code change: make _nodes a unique pointer
-    std::vector<GraphEdge *> _edges;
-    //std::vector< unique_ptr<GraphEdge> > _edges; //Task 4 code change: make _edges a unique pointer
+    std::vector<GraphEdge *> _edges;    
 
     ////
     //// EOF STUDENT CODE
