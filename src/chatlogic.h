@@ -5,6 +5,10 @@
 #include <string>
 #include "chatgui.h"
 
+#include <memory>
+
+using namespace std;
+
 // forward declarations
 class ChatBot;
 class GraphEdge;
@@ -17,8 +21,10 @@ private:
     ////
 
     // data handles (owned)
-    std::vector<GraphNode *> _nodes;
+    //std::vector<GraphNode *> _nodes;
+    std::vector< unique_ptr<GraphNode> > _nodes; //Task 3 code change: make _nodes a unique pointer
     std::vector<GraphEdge *> _edges;
+    //std::vector< unique_ptr<GraphEdge> > _edges; //Task 4 code change: make _edges a unique pointer
 
     ////
     //// EOF STUDENT CODE
